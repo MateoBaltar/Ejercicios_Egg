@@ -1,7 +1,3 @@
-import java.util.Scanner;
-
-import Entidades.Baraja;
-
 /*
 Realizar una baraja de cartas españolas orientada a objetos. Una carta tiene un número entre 1
 y 12 (el 8 y el 9 no los incluimos) y un palo (espadas, bastos, oros y copas). Esta clase debe
@@ -19,8 +15,11 @@ debemos indicárselo al usuario.
 indicárselo al usuario
 • mostrarBaraja(): muestra todas las cartas hasta el final. Es decir, si se saca una carta y
 luego se llama al método, este no mostrara esa primera carta.
- */
+*/
+package guia8_ejercicio03;
+import java.util.Scanner;
 
+import Entidades.Baraja;
 public class guia8_ejercicio03 {
     public static void main(String[] args) throws Exception {
         Scanner leer = new Scanner(System.in);

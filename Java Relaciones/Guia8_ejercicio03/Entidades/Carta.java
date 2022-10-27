@@ -17,7 +17,7 @@ indicárselo al usuario
 luego se llama al método, este no mostrara esa primera carta.
  */
 
-package Entidades;
+package guia8_ejercicio03.Entidades;
 
 public class Carta {
     private int numero;
