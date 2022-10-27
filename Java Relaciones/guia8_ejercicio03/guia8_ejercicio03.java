@@ -16,9 +16,10 @@ indicárselo al usuario
 • mostrarBaraja(): muestra todas las cartas hasta el final. Es decir, si se saca una carta y
 luego se llama al método, este no mostrara esa primera carta.
 */
-package guia8_ejercicio033;
+package guia8_ejercicio03;
 import java.util.Scanner;
-import guia8_ejercicio033.Entidades.Baraja;
+
+import guia8_ejercicio03.Entidades.Baraja;
 
 public class guia8_ejercicio03 {
     public static void main(String[] args) throws Exception {

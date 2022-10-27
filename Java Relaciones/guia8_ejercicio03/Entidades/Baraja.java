@@ -17,7 +17,7 @@ indicárselo al usuario
 luego se llama al método, este no mostrara esa primera carta.
  */
 
-package guia8_ejercicio033.Entidades;
+package guia8_ejercicio03.Entidades;
 
 import java.util.ArrayList;
 import java.util.Collections;
