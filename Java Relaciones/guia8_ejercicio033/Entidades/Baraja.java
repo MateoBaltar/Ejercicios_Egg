@@ -17,20 +17,20 @@ indicárselo al usuario
 luego se llama al método, este no mostrara esa primera carta.
  */
 
-package guia8_ejercicio03.Entidades;
+package guia8_ejercicio033.Entidades;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class Baraja {
     ArrayList<Carta> baraja = new ArrayList<>();
-    String[] palos = {"Espadas","Bastos","Oros","Copas"};
 
     public Baraja(){
         
     }
 
     public void crearBaraja() {
+        String[] palos = {"Espadas","Bastos","Oros","Copas"};
         for (int i = 1; i < 13; i++) {
             if (i != 8 && i !=9) {
                 for (int j = 0; j < 4; j++) {
