@@ -17,25 +17,22 @@ public class Jugador {
     private String id;
     private boolean mojado;
 
-    private Revolver revolver;
-
     public Jugador() {
     }
 
-    public Jugador(String id, boolean mojado, Revolver revolver) {
+    public Jugador(String id, boolean mojado) {
         this.id = id;
         this.mojado = mojado;
-        this.revolver = revolver;
     }
     
-    public boolean disparo(){
-        if (revolver.mojar() == true){
-            this.mojado = false;
-        } else {
+    public boolean disparo(Revolver r){
+        if (r.mojar() == true){
             this.mojado = true;
-            revolver.siguienteChorro();
+        } else {
+            this.mojado = false;
+            r.siguienteChorro();
         }
-        return (mojado == false);
+        return (mojado);
     }
 
     public String getId() {
@@ -52,14 +49,6 @@ public class Jugador {
 
     public void setMojado(boolean mojado) {
         this.mojado = mojado;
-    }
-
-    public Revolver getRevolver() {
-        return revolver;
-    }
-
-    public void setRevolver(Revolver revolver) {
-        this.revolver = revolver;
     }
     
 }

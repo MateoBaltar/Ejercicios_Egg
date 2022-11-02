@@ -29,7 +29,7 @@ public class Juego {
         do {
             for (Jugador jugador : jugadores) {
                 numRonda++;
-                if (jugador.disparo() == true) {
+                if (jugador.disparo(revolver) == true) {
                     System.out.println(jugador.getId() + " fue mojado por la bala en la ronda "+numRonda+". Fin del juego.");
                     finronda = true;
                     break;

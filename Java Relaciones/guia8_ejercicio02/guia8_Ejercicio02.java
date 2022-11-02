@@ -26,7 +26,6 @@ Métodos:
 • llenarJuego(ArrayList<Jugador>jugadores, Revolver r): este método recibe los jugadores
 y el revolver para guardarlos en los atributos del juego.
 
-10
 • ronda(): cada ronda consiste en un jugador que se apunta con el revolver de agua y
 aprieta el gatillo. Sí el revolver tira el agua el jugador se moja y se termina el juego, sino se
 moja, se pasa al siguiente jugador hasta que uno se moje. Si o si alguien se tiene que
@@ -52,8 +51,10 @@ public class guia8_Ejercicio02 {
         do {
             System.out.println("Ingrese la ID del jugador:");
             String id = leer.nextLine();
-            Jugador jugador = new Jugador(id,false,revolver);
+
+            Jugador jugador = new Jugador(id,false);
             jugadores.add(jugador);
+
             System.out.println("Desea añadir más jugadores?");
             menu = leer.nextLine();
         } while (menu.equals("Si") || menu.equals("si"));
