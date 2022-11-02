@@ -44,20 +44,21 @@ public class guia8_Ejercicio02 {
     public static void main(String[] args) throws Exception {
         Scanner leer = new Scanner(System.in);
         String menu;
-        Revolver revolver = new Revolver();
         ArrayList<Jugador> jugadores = new ArrayList<>();
-        revolver.llenarRevolver();
 
         do {
             System.out.println("Ingrese la ID del jugador:");
             String id = leer.nextLine();
 
-            Jugador jugador = new Jugador(id,false);
+            Jugador jugador = new Jugador(id,false,true);
             jugadores.add(jugador);
 
             System.out.println("Desea añadir más jugadores?");
             menu = leer.nextLine();
         } while (menu.equals("Si") || menu.equals("si"));
+
+        Revolver revolver = new Revolver();
+        revolver.llenarRevolver();
 
         Juego juego = new Juego();
         juego.llenarJuego(jugadores, revolver);

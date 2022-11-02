@@ -8,7 +8,7 @@ Métodos:
 mojar() y siguienteChorro() de Revolver. El jugador se apunta, aprieta el gatillo y si el
 revolver tira el agua, el jugador se moja. El atributo mojado pasa a false y el método
 devuelve true, sino false.
- */
+*/
 
 package Entidades;
 
@@ -16,15 +16,23 @@ public class Jugador {
 
     private String id;
     private boolean mojado;
+    private boolean comodin;
 
     public Jugador() {
     }
 
-    public Jugador(String id, boolean mojado) {
+    public Jugador(String id, boolean mojado, boolean comodin) {
         this.id = id;
         this.mojado = mojado;
+        this.comodin = comodin;
     }
-    
+
+/*
+• disparo(Revolver r): el método, recibe el revolver de agua y llama a los métodos de
+mojar() y siguienteChorro() de Revolver. El jugador se apunta, aprieta el gatillo y si el
+revolver tira el agua, el jugador se moja. El atributo mojado pasa a false y el método
+devuelve true, sino false.
+*/ 
     public boolean disparo(Revolver r){
         if (r.mojar() == true){
             this.mojado = true;
@@ -49,6 +57,12 @@ public class Jugador {
 
     public void setMojado(boolean mojado) {
         this.mojado = mojado;
+    }
+    public boolean isComodin(){
+        return comodin;
+    }
+    public void setComodin(boolean comodin){
+        this.comodin = comodin;
     }
     
 }

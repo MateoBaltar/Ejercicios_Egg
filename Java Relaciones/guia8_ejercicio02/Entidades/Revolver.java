@@ -38,7 +38,9 @@ public class Revolver {
     public boolean mojar(){
     return (posicionAgua == posicionActual);
     }
-
+/*
+• siguienteChorro(): cambia a la siguiente posición del tambor
+ */
     public void siguienteChorro(){
         posicionActual++;
         if (posicionActual > 10) {
@@ -48,6 +50,6 @@ public class Revolver {
 
     @Override
     public String toString(){
-        return "Revolver {" + "Posicion actual= " + posicionActual + ", Posicion del agua=" + posicionAgua + '}';
+        return "Revolver {" + "Posicion actual= " + posicionActual + ", Posicion del agua= " + posicionAgua + '}';
     }
 }
