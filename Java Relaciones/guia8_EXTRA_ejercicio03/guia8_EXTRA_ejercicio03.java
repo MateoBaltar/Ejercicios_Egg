@@ -35,6 +35,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import guia8_EXTRA_ejercicio03.Entidades.Cliente;
+import guia8_EXTRA_ejercicio03.Entidades.Cuota;
 import guia8_EXTRA_ejercicio03.Entidades.Poliza;
 import guia8_EXTRA_ejercicio03.Entidades.Vehiculo;
 
@@ -45,7 +46,6 @@ public class guia8_EXTRA_ejercicio03 {
         ArrayList<Cliente> clientes = new ArrayList<>();
         ArrayList<Poliza> polizas = new ArrayList<>();
         ArrayList<Vehiculo> vehiculos = new ArrayList<>();
-    
         int menu;
         String salir;
 
@@ -61,37 +61,103 @@ public class guia8_EXTRA_ejercicio03 {
             leer.nextLine();
 
             switch (menu) {
-                case 1: do {
+                case 1: if (clientes.size() == 0) {
+                    System.out.println("No hay clientes registrados. Desea registrar uno?");
+                    String registrar = leer.nextLine();
+                    if (registrar.equals("No") || registrar.equals("no")) {
+                       break; 
+                    }
+                } else {
+                    for (Cliente cliente : clientes) {
+                        System.out.println(cliente.toString());
+                    }
+                    System.out.println("Desea introduir otro cliente?");
+                    String registrar = leer.nextLine();
+                    if (registrar.equals("No") || registrar.equals("no")) {
+                       break; 
+                    }
+                }
+                
+                    do {
                     Cliente cliente = new Cliente();
                     cliente.registrarCliente();
                     clientes.add(cliente);
-
+                    vehiculos.add(cliente.getVehiculo());
                     System.out.println("Desea introducir otro cliente?");
                     salir = leer.nextLine();
                 } while (salir.equals("Si") || salir.equals("si"));
                 break;
 
 
-                case 2:do {
-                    Vehiculo vehiculo = new Vehiculo();
-                    vehiculo.registrarVehiculo();
-                    vehiculos.add(vehiculo);
-                    salir = leer.nextLine();
-                } while (salir.equals("Si") || salir.equals("si"));
+                case 2:  if (vehiculos.size() == 0) {
+                    System.out.println("No hay vehiculos registrados. Desea registrar un cliente con vehiculo?");
+                    String registrar = leer.nextLine();
+                    if (registrar.equals("No") || registrar.equals("no")) {
+                       break; 
+                    }
+                } else {
+                    for (Vehiculo vehiculo : vehiculos) {
+                        System.out.println(vehiculo.toString());
+                    }
+                    System.out.println("Desea introduir otro cliente con vehiculo?");
+                    String registrar = leer.nextLine();
+                    if (registrar.equals("No") || registrar.equals("no")) {
+                       break; 
+                    }
+                }
+                
+                    Cliente cliente = new Cliente();
+                    cliente.registrarCliente();
+                    clientes.add(cliente);
+                    vehiculos.add(cliente.getVehiculo());
+
                 break; 
 
 
                 case 3: do {
+                    if (polizas.isEmpty()) {
+                        System.out.println("No hay polizas registrados. Desea registrar una?");
+                        String registrar = leer.nextLine();
+                        if (registrar.equals("No") || registrar.equals("no")) {
+                           break; 
+                        }
+                    } else {
+                        for (Poliza poliza : polizas) {
+                            System.out.println(poliza.toString());
+                        }
+                        System.out.println("Desea registrar una nueva poliza?");
+                        String registrar = leer.nextLine();
+                        if (registrar.equals("No") || registrar.equals("no")) {
+                           break; 
+                        }
+                    }
                     Poliza poliza = new Poliza();
                     poliza.registrarPoliza(clientes, vehiculos);
                     polizas.add(poliza);
-
-                    System.out.println("Desea introducir otro cliente?");
+                    System.out.println("Desea introducir otra poliza?");
                     salir = leer.nextLine();
                 } while (salir.equals("Si") || salir.equals("si"));
                 break;
 
-                case 4:
+                case 4: if (polizas.isEmpty()) {
+                    System.out.println("No hay polizas registrados. Desea registrar una?");
+                    String registrar = leer.nextLine();
+                    if (registrar.equals("No") || registrar.equals("no")) {
+                       break; 
+                    }
+                } else {
+                    int x = 1;
+                    System.out.println("De cual poliza quiere saber las cuotas?");
+                    for (Poliza poliza : polizas) {
+                        System.out.println(x + poliza.toString());
+                        x++;
+                    }
+                    System.out.println("------------");
+                    int eleccion = leer.nextInt();
+                    for (Cuota cuota : polizas.get(eleccion-1).getCuotas()) {
+                        System.out.println(cuota.toString());
+                    }
+                }
                 break; 
 
 

@@ -9,6 +9,8 @@ package guia8_EXTRA_ejercicio03.Entidades;
 import java.util.Scanner;
 
 public class Cliente {
+    
+
     Scanner leer = new Scanner(System.in);
 
     private String nombre;
@@ -18,7 +20,7 @@ public class Cliente {
     private String domicilio;
     private long telefono;
 
-    private Vehiculo vehiculo;
+    private Vehiculo vehiculo = new Vehiculo();
 
     public void registrarCliente(){
         String salir;
@@ -39,7 +41,7 @@ public class Cliente {
             System.out.println("Ingrese el mail");
             this.mail = leer.nextLine();
 
-            System.out.println(" Ingrese el domicilio");
+            System.out.println("Ingrese el domicilio");
             this.domicilio = leer.nextLine();
 
             System.out.println("Ingrese el numero de telefono");
@@ -59,13 +61,20 @@ public class Cliente {
             salir = leer.nextLine();
             
         } while (salir.equals("No") || salir.equals("no"));
-
-        System.out.println("Cliente cargado correctamente.");
-        
+        System.out.println("Cliente registrado correctamente. Procediendo a registrar vehiculo del cliente " + nombre + " " + apellido);
+        this.vehiculo.registrarVehiculo();
     }
 
     public String getNombreCompleto(){
         return nombre + " " + apellido;
     }
-
+    
+    public Vehiculo getVehiculo(){
+        return vehiculo;
+    }
+    @Override
+    public String toString() {
+        return "[ Nombre completo: " + nombre +" "+apellido + ", documento: " + documento
+                + ", mail: " + mail + ", domicilio: " + domicilio + ", telefono: " + telefono + " ]";
+    }
 }

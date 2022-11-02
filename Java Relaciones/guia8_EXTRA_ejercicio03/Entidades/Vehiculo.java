@@ -8,8 +8,6 @@ package guia8_EXTRA_ejercicio03.Entidades;
 import java.util.Scanner;
 
 public class Vehiculo {
-    
-
     Scanner leer = new Scanner(System.in);
 
     private String marca;
@@ -19,6 +17,19 @@ public class Vehiculo {
     private int chasis;
     private String color;
     private String tipo;
+
+    public Vehiculo(){
+    }
+    
+    public Vehiculo(String marca, String modelo, int anio, long numeroMotor, int chasis, String color, String tipo){
+        this.marca = marca;
+        this.modelo = modelo;
+        this.anio = anio;
+        this.numeroMotor = numeroMotor;
+        this.chasis = chasis;
+        this.color = color;
+        this.tipo = tipo;
+    }
 
     public void registrarVehiculo(){
         String salir;
@@ -96,5 +107,9 @@ public class Vehiculo {
         return tipo;
     }
 
-    
+    @Override
+    public String toString() {
+        return "Vehiculo [ Marca: " + marca + ", modelo: " + modelo + ", año: " + anio + ", numero de motor: " + numeroMotor
+                + ", chasis: " + chasis + ", color: " + color + ", tipo: " + tipo + " ]";
+    }
 }
