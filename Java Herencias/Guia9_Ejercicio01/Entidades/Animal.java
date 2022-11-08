@@ -20,6 +20,7 @@ public class Animal {
         this.razaAnimal = razaAnimal;
     }
 
-    public void alimentacion(){
+    public void alimentarse(){
     }
+
 }
