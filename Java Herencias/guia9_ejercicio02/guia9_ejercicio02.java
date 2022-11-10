@@ -6,7 +6,6 @@ el precio final de los dos electrodomésticos.
 
 package guia9_ejercicio02;
 
-import guia9_ejercicio02.Entidades.Electrodomestico;
 import guia9_ejercicio02.Entidades.Lavadora;
 import guia9_ejercicio02.Entidades.Televisor;
 
