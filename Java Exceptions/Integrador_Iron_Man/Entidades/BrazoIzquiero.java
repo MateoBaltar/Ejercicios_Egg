@@ -1,5 +1,46 @@
 package Integrador_Iron_Man.Entidades;
 
-public class BrazoIzquiero {
-    private int propulsor;
+import java.util.Random;
+
+public class BrazoIzquiero{
+    Random random = new Random();
+    public boolean destruido = false;
+    public  boolean estado = true;
+    private final double consumo = 0.5;
+
+    public double usar(int tiempo, String intensidad){
+        if (estado == true) {
+            int danio = random.nextInt(100);
+            if ( danio <= 30) {
+                System.out.println("El brazo izquierdo fue dañado");
+                this.estado = false;
+            }
+            switch (intensidad) {
+                case "Basico":
+                return (consumo * tiempo);
+                case "Normal":
+                return ((consumo * 2) * tiempo);
+                case "Intensivo":
+                return ((consumo * 3) * tiempo);
+                default:
+                return 0;
+                
+            }
+        } else{
+            System.out.println("El brazo izquierdo se encuentra dañado");
+            return 0;
+        }
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+
+    public void setDestruido(boolean destruido){
+        this.destruido = destruido;
+        this.estado = false;
+    }
 }
