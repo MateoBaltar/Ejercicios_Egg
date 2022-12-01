@@ -1,4 +1,6 @@
-package principal.principal.dominio.mascota;
+package principal.dominio.mascota;
+
+import principal.dominio.usuario.Usuario;
 
 public class Mascota {
 

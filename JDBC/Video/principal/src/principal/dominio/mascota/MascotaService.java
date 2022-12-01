@@ -1,4 +1,9 @@
-package JDBC.Video.principal.dominio.mascota;
+package principal.dominio.mascota;
+
+import java.util.Collection;
+
+import principal.dominio.usuario.Usuario;
+import principal.persistencia.MascotaDAO;
 
 public class MascotaService {
 

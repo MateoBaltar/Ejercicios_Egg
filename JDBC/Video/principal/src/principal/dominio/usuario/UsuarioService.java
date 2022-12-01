@@ -1,7 +1,9 @@
 package principal.dominio.usuario;
 
-import principal.persistencia.UsuarioDAO;
+
 import java.util.Collection;
+
+import principal.persistencia.UsuarioDAO;
 
 public class UsuarioService {
 
