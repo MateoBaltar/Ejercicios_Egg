@@ -16,7 +16,7 @@ public abstract class DAO {
     protected Statement sentencia;
 
     private final String USER = "root";
-    private final String PASSWORD = "Jqkre2jqkre2.";
+    private final String PASSWORD = "";
     private final String DATABASE = "estancias_exterior";
     private final String DRIVER = "com.mysql.jdbc.Driver";
 
