@@ -1,0 +1,25 @@
+{
+    "java.project.sourcePaths": [
+        "src"
+    ],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\mateo\\Downloads\\persistencia\\mysql-connector-java-5.1.48.jar"
+    ],
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "MateoDB",
+            "database": "Libreria",
+            "username": "root",
+            "password": "Jqkre2jqkre2."
+        }
+    ]
+}

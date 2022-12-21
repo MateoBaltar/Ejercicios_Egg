@@ -1,6 +1,0 @@
-{
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "c:\\Users\\mateo\\Downloads\\persistencia\\mysql-connector-java-5.1.48.jar"
-    ]
-}

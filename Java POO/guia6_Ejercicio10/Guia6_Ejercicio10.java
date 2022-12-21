@@ -30,6 +30,7 @@ public class Guia6_Ejercicio10 {
         for (int i = 0; i != 50; i++) {
             vector1[i] = (int) Math.ceil(Math.random() * 30);
         }
+        
         System.out.println(Arrays.toString(vector1));
         Arrays.sort(vector1);
         
