@@ -1,0 +1,19 @@
+body{
+    background-color: gray;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    color: yellow;
+    text-align: left;
+}

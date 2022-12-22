@@ -1,0 +1,18 @@
+body{
+    text-align: center;
+}
+
+th[scope=col]{
+    background-color: darkgray;
+}
+
+th[scope=row]{
+    background-color: lightblue;
+}
+
+tr:nth-child(2), tr:nth-child(4){
+    background-color: lightyellow;
+}
+
+th:nth-child(1){
+}

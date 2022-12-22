@@ -1,0 +1,56 @@
+#titulo{
+    color: #367E7F;
+}
+
+strong{
+    color: red;
+}
+
+span.destacado{
+    color: orange;
+}
+
+#subtitulo{
+    color: blue;
+}
+
+a{
+    color: red;
+}
+
+em{
+    color: blue;
+}
+
+span.especial{
+    color: purple;
+}
+
+th.especial{
+    color: orange;
+}
+
+td{
+    color: green;
+}
+
+th{
+    color: red;
+}
+td strong{
+    color: orange;
+}
+td em{
+    color: green;
+}
+#adicional{
+    color: green;
+}
+
+#adicional #especial{
+    color: pink;
+}
+
+#adicional a{
+    color: greenyellow;
+}
