@@ -1,0 +1,26 @@
+body{
+    text-align: center;
+}
+
+th[scope=col]{
+    background-color: darkgray;
+}
+
+th[scope=row]{
+    background-color: lightblue;
+}
+
+tr:nth-child(2), tr:nth-child(4){
+    background-color: lightyellow;
+}
+
+th:nth-child(1){
+}
+
+img{
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
