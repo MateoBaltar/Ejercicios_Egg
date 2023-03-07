@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security"></html>
+
+  <head th:replace="/fragments/head :: head"> </head>
+
+<body>
+    <div>
+        <nav th:replace="/fragments/navbar :: nav"></nav>
+    </div>
+
+    <div th:switch="${usuario.rol.toString()}">
+            <form th:case="'USER'" class="formulario" th:action="@{/admin/ModificarUsuario/__${usuario.id}__}" method="post">
+                <input hidden th:value="${id}" name="id">
+                <div class="col-xl-5 mx-auto" style="text-align: center;">
+        
+                    <label for="text" class="form-label" style="text-align: center; color: rgb(16,204,244);"><h3><strong>Nombre</strong></h3></label>
+                    <input type="text" class="form-control" name="nombre" placeholder="NOMBRE" th:value="${nombre}">
+        
+                </div>
+        
+                <div class="col-xl-5 mx-auto" style="text-align: center;">
+        
+                    <label for="email" class="form-label" style="text-align: center; color: rgb(16,204,244);"><h3><strong>Email</strong></h3></label>
+                    <input type="email" class="form-control" name="email" placeholder="EMAIL" th:value="${email}">
+        
+                </div>
+        
+                <div class="col-xl-5 mx-auto" style="text-align: center;">
+        
+                    <label for="contrasenia" class="form-label" style="text-align: center; color: rgb(16,204,244);"><h3><strong>Contraseña</strong></h3></label>
+                    <input type="password" class="form-control" name="password" placeholder="CONTRASEÑA" th:value="${password}">
+        
+                </div>
+        
+                <div class="col-xl-5 mx-auto" style="text-align: center;">
+        
+                    <label for="contrasenia" class="form-label" style="text-align: center; color: rgb(16,204,244);"><h3><strong>Vuelva a ingresar la contraseña</strong></h3></label>
+                    <input type="password" class="form-control" name="password2" placeholder="CONTRASEÑA NUEVAMENTE" th:value="${password2}">
+        
+                    <br>
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                </div>
+            </form>
+
+
+
+            <form th:case="'EDITOR'" class="formulario" th:action="@{/admin/ModificarPeriodista/__${usuario.id}__}" method="POST">
+                <input hidden th:value="${id}" name="id">
+
+                <div class="col-xl-5 mx-auto" style="text-align: center;">
+        
+                    <label for="text" class="form-label" style="text-align: center; color: rgb(16,204,244);"><h3><strong>Nombre</strong></h3></label>
+                    <input type="text" class="form-control" name="nombre" placeholder="NOMBRE" th:value="${nombre}">
+        
+                </div>
+        
+                <div class="col-xl-5 mx-auto" style="text-align: center;">
+        
+                    <label for="email" class="form-label" style="text-align: center; color: rgb(16,204,244);"><h3><strong>Email</strong></h3></label>
+                    <input type="email" class="form-control" name="email" placeholder="EMAIL" th:value="${email}">
+        
+                </div>
+        
+                <div class="col-xl-5 mx-auto" style="text-align: center;">
+        
+                    <label for="contrasenia" class="form-label" style="text-align: center; color: rgb(16,204,244);"><h3><strong>Contraseña</strong></h3></label>
+                    <input type="password" class="form-control" name="password" placeholder="CONTRASEÑA" th:value="${password}">
+        
+                </div>
+        
+                <div class="col-xl-5 mx-auto" style="text-align: center;">
+        
+                    <label for="contrasenia" class="form-label" style="text-align: center; color: rgb(16,204,244);"><h3><strong>Vuelva a ingresar la contraseña</strong></h3></label>
+                    <input type="password" class="form-control" name="password2" placeholder="CONTRASEÑA NUEVAMENTE" th:value="${password2}">
+        
+        
+                </div>
+                <div class="col-xl-5 mx-auto" style="text-align: center;">
+        
+                    <label for="contrasenia" class="form-label" style="text-align: center; color: rgb(16,204,244);"><h3><strong>Salario mensual</strong></h3></label>
+                    <input type="number" class="form-control" name="salario" placeholder="SALARIO" th:value="${salario}">
+        
+                    <br>
+                    <button type="submit" class="btn btn-primary">Registrar periodista</button>
+                </div>
+            </form>
+    </div>
+
+    <div th:if="${usuario.rol == 'EDITOR'}">
+
+       
+    </div>
+</body>

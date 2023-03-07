@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-md" style="background-color: rgba(117,50,249,255)">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"> <img th:src="@{/Imagenes/Egg.png}" alt="Logo" width="20" height="30" class="d-inline-block align-text-top">
+        <strong>Egg News</strong></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active"  th:if="${session.usuariosession != null}"  aria-current="page" th:href="@{/inicio}"><strong>Inicio</strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  th:if="${session.usuariosession == null}"  aria-current="page" th:href="@{/}"><strong>Inicio</strong></a>
+          </li>
+          <div>
+            <li class="nav-item">
+            <a class="nav-link active" sec:authorize="hasAnyRole('ADMIN','EDITOR')" th:href="@{/admin/dashboard}"><strong>Panel Admin</strong></a>
+          </li>
+        </div>
+        </ul>
+      </div>
+    </div>
+
+  <div th:if="${session.usuariosession == null}" class="navbar-collapse order-3">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item">
+        <a class="nav-link active" href="/login"><strong>Ingresar</strong></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/registrar"><strong>Registrarse</strong></a>
+      </li>
+    </ul>
+  </div>
+
+    <div th:if="${session.usuariosession != null}" class="navbar-collapse order-3">
+      <ul class="navbar-nav  ml-auto">
+        <li class="nav-item dropstart">
+          <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <strong>Perfil</strong>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+            <li><a class="dropdown-item" href="/logout">Cerrar Sesion</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>

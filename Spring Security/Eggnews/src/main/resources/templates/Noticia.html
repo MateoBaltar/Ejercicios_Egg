@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security"></html>
+  <head th:replace="/fragments/head :: head"> </head>
+
+<body>
+  <nav th:replace="/fragments/navbar :: nav"></nav>
+
+
+ <h1 th:text="${noticia.titulo}" style="text-align: center; color: rgb(16,204,244);"></h1>
+  <h6 th:text="'Escrito por: '+ ${noticia.autor.getNombre()}" style="text-align: center; color: rgb(16,204,244);"> </h6>
+
+  <h6 th:text="'Fecha de publicación: '+${noticia.creacion}" style="text-align: center; color: rgb(16,204,244);"></h6>
+ <p th:text="${noticia.cuerpo}" style=" color: white; white-space: pre-line; position: relative; left: 10px;"></p>
+</body>
+</html>
