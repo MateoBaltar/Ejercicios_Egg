@@ -1,6 +1,5 @@
 package com.eggnews.news.entidades;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.eggnews.news.Enumeraciones.Rol;

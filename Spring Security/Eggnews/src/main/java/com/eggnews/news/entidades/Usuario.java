@@ -9,7 +9,6 @@ import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jakarta.persistence.MappedSuperclass;
 
 @Entity
 public class Usuario {
