@@ -30,5 +30,5 @@
 
 ## + Lenguajes
 - [JavaScript](https://github.com/MateoBaltar/Ejercicios_Egg/tree/main/%2B%20Lenguajes/JavaScript)
-- <strike>Python</strike> (En proceso) 
+- [Python](https://github.com/MateoBaltar/Ejercicios_Egg/tree/main/%2B%20Lenguajes/Python)
 - <strike>React</strike> (En proceso)
