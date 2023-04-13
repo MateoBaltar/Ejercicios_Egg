@@ -36,6 +36,6 @@
 
 ## +Lenguajes
 
-- [JavaScript](https://github.com/MateoBaltar/Ejercicios_Egg/tree/main/%2B%20Lenguajes/JavaScript)
-- [Python](https://github.com/MateoBaltar/Ejercicios_Egg/tree/main/%2B%20Lenguajes/Python)
-- [React](https://github.com/MateoBaltar/Ejercicios_Egg/tree/main/%2B%20Lenguajes/React)
+- [JavaScript](https://github.com/MateoBaltar/Ejercicios_Egg/tree/main/6_Lenguajes/JavaScript)
+- [Python](https://github.com/MateoBaltar/Ejercicios_Egg/tree/main/6_Lenguajes/Python)
+- [React](https://github.com/MateoBaltar/Ejercicios_Egg/tree/main/6_Lenguajes/React)
